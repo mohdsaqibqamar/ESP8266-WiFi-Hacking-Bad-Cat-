@@ -8,7 +8,7 @@ Default WiFi name `BadCat` password `Cat@1234`
 
 ---
 
-## âš¡ Features & Usage
+## ⚡ Features & Usage
 
 ### 1. Target Scanning
 Scan the surrounding area for available Wi-Fi access points. The control panel will populate a table with the SSID, BSSID (MAC Address), and Channel of nearby networks.
@@ -83,7 +83,7 @@ This step is super important so the Wi-Fi Repeater works fast!
 
 ---
 
-## ðŸ’» Accessing the Control Panel
+## 💻 Accessing the Control Panel
 
 Once the upload is done:
 1. Connect your phone or PC to the Wi-Fi network named **BadCat** (Password: `Cat@1234`).
@@ -94,7 +94,7 @@ Once the upload is done:
 
 ---
 
-## ðŸ› ï¸ Troubleshooting (Fix "Choose File" Issue)
+## 🛠️ Troubleshooting (Fix "Choose File" Issue)
 
 If the **Choose File** button is not working on your phone while uploading a Custom Template, it is because of the Android Captive Portal limitations. Use this method to fix it:
 
