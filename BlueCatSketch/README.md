@@ -2,6 +2,8 @@
 
 An advanced, feature-rich Wi-Fi auditing and penetration testing tool designed specifically for the ESP8266 microcontroller. This project provides an all-in-one control panel for network analysis, deauthentication attacks, evil twin phishing, and even acts as a Wi-Fi repeater. It features a sleek "Neon" dark-themed UI.
 
+LiveWeb:- https://raw.githack.com/mohdsaqibqamar/ESP8266-WiFi-Hacking-Blue-Cat-/refs/heads/main/Website/index.html
+
 ---
 
 ## ⚡ Features & Usage
@@ -37,7 +39,7 @@ Flood the area with dozens of fake Wi-Fi networks (SSIDs) to confuse users or hi
 
 ---
 
-## 👶 Step-by-Step Installation Guide (Super Easy!)
+## Step-by-Step Installation Guide (Super Easy!)
 
 Don't worry if you are completely new to this! Just follow these easy steps like a recipe, and you'll have your **Blue Wifi Cat** running in no time.
 
