@@ -233,7 +233,7 @@ void setup() {
   wifi_set_promiscuous_rx_cb(sniffer_callback);
   wifi_promiscuous_enable(1);
   WiFi.softAPConfig(IPAddress(192, 168, 4, 1) , IPAddress(192, 168, 4, 1) , IPAddress(255, 255, 255, 0));
-  WiFi.softAP("Syper", "Syper@786");
+  WiFi.softAP("BlueCat", "Cat@1234");
   dnsServer.start(53, "*", IPAddress(192, 168, 4, 1));
 
   // Add default beacons
@@ -257,7 +257,7 @@ void setup() {
   });
   
   webServer.on("/login", [](){
-    if (webServer.hasArg("adminpass") && webServer.arg("adminpass") == "Syper@786") {
+    if (webServer.hasArg("adminpass") && webServer.arg("adminpass") == "Cat@1234") {
       is_logged_in = true;
       webServer.sendHeader("Location", "/admin", true);
       webServer.send(302, "text/plain", "");
@@ -348,7 +348,7 @@ void handleResult() {
     WiFi.softAPdisconnect (true);
     delay(100);
     WiFi.softAPConfig(IPAddress(192, 168, 4, 1) , IPAddress(192, 168, 4, 1) , IPAddress(255, 255, 255, 0));
-    WiFi.softAP("Syper", "Syper@786");
+    WiFi.softAP("BlueCat", "Cat@1234");
     dnsServer.start(53, "*", IPAddress(192, 168, 4, 1));
     Serial.println("Good password was entered !");
     Serial.println(_correct);
@@ -422,7 +422,7 @@ void handleArgs() {
       yield(); 
     }
     
-    // Hop back, Syper never drops!
+    // Hop back, BlueCat never drops!
     wifi_promiscuous_enable(0);
     wifi_set_channel(old_ch);
     wifi_promiscuous_enable(1);
@@ -491,7 +491,7 @@ void handleArgs() {
       
       WiFi.softAPdisconnect (true);
       WiFi.softAPConfig(IPAddress(192, 168, 4, 1) , IPAddress(192, 168, 4, 1) , IPAddress(255, 255, 255, 0));
-      WiFi.softAP("Syper", "Syper@786");
+      WiFi.softAP("BlueCat", "Cat@1234");
       dnsServer.start(53, "*", IPAddress(192, 168, 4, 1));
       
       wifi_promiscuous_enable(0);
@@ -567,7 +567,7 @@ void handleArgs() {
         WiFi.disconnect();
         
         WiFi.softAPConfig(IPAddress(192, 168, 4, 1) , IPAddress(192, 168, 4, 1) , IPAddress(255, 255, 255, 0));
-        WiFi.softAP("Syper", "Syper@786");
+        WiFi.softAP("BlueCat", "Cat@1234");
         dnsServer.start(53, "*", IPAddress(192, 168, 4, 1));
         wifi_promiscuous_enable(1);
         
@@ -587,7 +587,7 @@ void handleArgs() {
       
       WiFi.disconnect();
       WiFi.softAPConfig(IPAddress(192, 168, 4, 1) , IPAddress(192, 168, 4, 1) , IPAddress(255, 255, 255, 0));
-      WiFi.softAP("Syper", "Syper@786");
+      WiFi.softAP("BlueCat", "Cat@1234");
       dnsServer.start(53, "*", IPAddress(192, 168, 4, 1));
       
       wifi_promiscuous_enable(1);
@@ -764,7 +764,7 @@ String buildAdminPage() {
        _html += "</select>";
        
        _html += "<label>HOME WI-FI PASSWORD:</label><input type='password' name='hpass' required>";
-       _html += "<label>EXTENDER NAME (NEW WI-FI):</label><input type='text' name='essid' value='Syper_EXT' required>";
+       _html += "<label>EXTENDER NAME (NEW WI-FI):</label><input type='text' name='essid' value='BlueCat_EXT' required>";
        _html += "<label>EXTENDER PASSWORD (MIN 8 CHARS):</label><input type='text' name='epass' value='12345678' minlength='8' required>";
        _html += "<button type='submit' class='green'><svg viewBox='0 0 24 24'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z'/></svg>INITIALIZE REPEATER</button></form>";
        _html += "<p style='font-size:12px; color:#5c6b89; margin-top:15px; border-top: 1px dashed rgba(0, 229, 255, 0.3); padding-top: 15px;'>Note: Starting Repeater disables Deauth/Phishing temporarily. Device will auto-connect to Home Wi-Fi and create a new Extender Network.</p>";
