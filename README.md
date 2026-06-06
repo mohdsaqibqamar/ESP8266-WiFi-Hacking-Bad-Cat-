@@ -4,6 +4,8 @@ An advanced, feature-rich Wi-Fi auditing and penetration testing tool designed s
 
 LiveWeb:- https://raw.githack.com/mohdsaqibqamar/ESP8266-WiFi-Hacking-Blue-Cat-/refs/heads/main/Website/index.html
 
+Default user `BlueCat` password `Cat@1234`
+
 ---
 
 ## ⚡ Features & Usage
